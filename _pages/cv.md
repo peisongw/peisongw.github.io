@@ -19,7 +19,7 @@ Education
 Work experience
 ======
 * 2023.7-2023.11: Algorithm Engineer Intern
-  * Createlink Technology Co., Ltd
+  * Createlink Technology Co., Ltd, Hangzhou, China
   * Supervisor: Yan Zhou, CTO
 
 <!-- * Fall 2015: Research Assistant
