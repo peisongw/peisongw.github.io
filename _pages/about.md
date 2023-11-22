@@ -18,9 +18,9 @@ I graduated from Shenzhen Foreign Language School in 2018.
 
 Research Interest
 ======
-Graph Learning, especially graph anomaly detection and graph structure learning.<br>
+* Graph Learning, especially graph anomaly detection and graph structure learning.<br>
 
-Large language model, especially its fusion with graph.<br>
+* Large language model, especially its fusion with graph.
 
 News
 ======
