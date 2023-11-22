@@ -8,7 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I am Peisong Wang, 
+Hi! I am Peisong Wang, currently a second-year graduate student at the Tsinghua-Berkeley Shenzhen Institute (TBSI) of Tsinghua University.  advised by Professor Wai Kin (Victor) Chan.
+
+I am an intern at the Information Thrust of the Hong Kong University of Science and Technology (Guangzhou), adviced by Professor Jia Li. 
+
+I received my Bachelor’s degree in Information Engineering in 2022 from the Beijing University of Posts and Telecommunications. 
+
+I graduated from Shenzhen Foreign Language School in 2018.
 
 A data-driven personal website
 ======
