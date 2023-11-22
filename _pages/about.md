@@ -16,6 +16,11 @@ I received my Bachelor’s degree in Information Engineering in 2022 from the Be
 
 I graduated from Shenzhen Foreign Language School in 2018.
 
+Research Interest
+======
+Graph Learning, especially graph anomaly detection and graph structure learning.
+Large language model, especially its fusion with graph.
+
 News
 ======
 We publish a survey paper: [A Survey of Graph Meets Large Language Model: Progress and Future Directions](https://arxiv.org/abs/2311.12399) and the corresponding github repo: [Awesome-LLMs-in-Graph-tasks](https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks).
