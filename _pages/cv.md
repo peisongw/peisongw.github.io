@@ -20,7 +20,6 @@ Work experience
 ======
 * 2023.7-2023.11: Algorithm Engineer Intern
   * Createlink Technology Co., Ltd
-  * Duties included: Tagging issues
   * Supervisor: Yan Zhou, CTO
 
 <!-- * Fall 2015: Research Assistant
