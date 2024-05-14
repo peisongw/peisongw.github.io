@@ -27,11 +27,3 @@ News
 2024.4 Our survey [A Survey of Graph Meets Large Language Model: Progress and Future Directions](https://arxiv.org/abs/2311.12399) accepted by IJCAI'24!
 
 2023.11 We publish a survey paper: [A Survey of Graph Meets Large Language Model: Progress and Future Directions](https://arxiv.org/abs/2311.12399) and the corresponding github repo: [Awesome-LLMs-in-Graph-tasks](https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks).
-<!-- 
-Publications
-======
-(^=equal contribution, *=corresponding author)
-##  2024
-* A Survey of Graph Meets Large Language Model: Progress and Future Directions. [[PDF](https://arxiv.org/pdf/2311.12399.pdf)], [[repo](https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks)] <br>
-Yuhan Li^, Zhixun Li^, **Peisong Wang^**, Jia Li\*, Xiangguo Sun, Hong Cheng, Jeffrey Xu Yu. <br>
-IJCAI 2024 <br> -->
