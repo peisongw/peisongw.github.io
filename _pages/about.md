@@ -24,6 +24,8 @@ Research Interest
 
 News
 ======
+2024.5 Our research paper [ZeroG: Investigating Cross-dataset Zero-shot Transferability in Graphs](https://arxiv.org/abs/2402.11235) accepted by KDD'24!
+
 2024.4 Our survey [A Survey of Graph Meets Large Language Model: Progress and Future Directions](https://arxiv.org/abs/2311.12399) accepted by IJCAI'24!
 
 2023.11 We publish a survey paper: [A Survey of Graph Meets Large Language Model: Progress and Future Directions](https://arxiv.org/abs/2311.12399) and the corresponding github repo: [Awesome-LLMs-in-Graph-tasks](https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks).
