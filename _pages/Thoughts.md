@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "CV"
-permalink: /cv/
+title: "Thoughts"
+permalink: /Thoughts/
 author_profile: true
 redirect_from:
   - /resume
@@ -9,18 +9,17 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+Why we need Graph?
 ======
-* B.S. in Beijing, Beijing University of Posts and Telecommunications, 2018-2022
-* M.S. in Shenzhen, Tsinghua University, 2022-2025
-  * Supervisor: Professor Wai Kin (Victor) Chan
+
+If graph still outperforms in the era of LLM?
+======
+
+How to construct graph from raw data?
+======
 <!-- * Ph.D in Version Control Theory, GitHub University, 2018 (expected) -->
 
-Work experience
-======
-* 2023.7-2023.11: Algorithm Engineer Intern
-  * Createlink Technology Co., Ltd, Hangzhou, China
-  * Supervisor: Yan Zhou, CTO
+
 
 <!-- * Fall 2015: Research Assistant
   * Github University
