@@ -6,7 +6,7 @@ author_profile: true
 (^=equal contribution)
 ##  2024
 * Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems <br>
-Feixue Liu, Yuqing Miao, Yun Ye, **Peisong Wang**, Xinglu Liu, Kai Zhang, Wai Kin (Victor) Chan
+Feixue Liu, Yuqing Miao, Yun Ye, **Peisong Wang**, Xinglu Liu, Kai Zhang, Wai Kin (Victor) Chan <br>
 WSC 2024 <br>
 
 * ZeroG: Investigating Cross-dataset Zero-shot Transferability in Graphs [[PDF](https://arxiv.org/pdf/2402.11235.pdf)],[[repo](https://github.com/NineAbyss/ZeroG)] <br>
