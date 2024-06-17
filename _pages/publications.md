@@ -9,7 +9,7 @@ author_profile: true
 Feixue Liu, Yuqing Miao, Yun Ye, **Peisong Wang**, Xinglu Liu, Kai Zhang, Wai Kin (Victor) Chan
 WSC 2024 <br>
 
-* ZeroG: Investigating Cross-dataset Zero-shot Transferability in Graphs [[PDF](https://arxiv.org/pdf/2402.11235.pdf)] <br>
+* ZeroG: Investigating Cross-dataset Zero-shot Transferability in Graphs [[PDF](https://arxiv.org/pdf/2402.11235.pdf)],[[repo](https://github.com/NineAbyss/ZeroG)] <br>
 Yuhan Li, **Peisong Wang**, Zhixun Li, Jeffrey Xu Yu, Jia Li <br>
 KDD 2024 <br>
 
