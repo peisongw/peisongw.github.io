@@ -5,7 +5,7 @@ author_profile: true
 ---
 (^=equal contribution)
 ##  2024
-* Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems 
+* Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems <br>
 Feixue Liu, Yuqing Miao, Yun Ye, **Peisong Wang**, Xinglu Liu, Kai Zhang, Wai Kin (Victor) Chan
 WSC 2024 <br>
 
