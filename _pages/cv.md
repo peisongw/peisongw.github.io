@@ -18,9 +18,14 @@ Education
 
 Work experience
 ======
+* 2024.7-now: Applied Research Intern
+  * Tencent, Shenzhen, China
+  * Mentor: Rui Sun
+
+
 * 2023.7-2023.11: Algorithm Engineer Intern
   * Createlink Technology Co., Ltd, Hangzhou, China
-  * Supervisor: Yan Zhou, CTO
+  * Mentor: Yan Zhou, CTO
 
 <!-- * Fall 2015: Research Assistant
   * Github University
