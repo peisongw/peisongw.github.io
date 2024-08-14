@@ -1,8 +1,9 @@
-> L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
-
 ---
 permalink: /
 title: "About me"
+
+> L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
+
 excerpt: "About me"
 author_profile: true
 redirect_from: 
