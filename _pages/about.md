@@ -1,15 +1,14 @@
 ---
 permalink: /
 title: "About me"
-
-> L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
-
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+> L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
 
 Hi! I am Peisong Wang, currently a second-year graduate student at Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.tbsi.edu.cn/cwj/main.htm).
 
