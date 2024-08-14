@@ -10,7 +10,7 @@ redirect_from:
 
 > L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
 
-Hi! I am Peisong Wang (王沛松 in Chinese), currently a last-year graduate student at Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.tbsi.edu.cn/cwj/main.htm).
+Hi! I am Peisong Wang (王沛松 in Chinese), currently a last-year master's student at Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.tbsi.edu.cn/cwj/main.htm).
 
 I am an intern at the Information Thrust of Hong Kong University of Science and Technology, adviced by Professor [Jia Li](https://sites.google.com/view/lijia). 
 
