@@ -7,8 +7,9 @@ author_profile: true
 ##  2024
 
 * GLBench: A Comprehensive Benchmark for Graph with Large Language Models
-. [[paper](https://arxiv.org/abs/2407.07457)], [[repo](https://github.com/NineAbyss/GLBench)] <br>
-Yuhan Li^, **Peisong Wang**^, Xiao Zhu, Aochuan Chen, Haiyun Jiang, Deng Cai, Victor Wai Kin Chan, Jia Li <br>
+. <br>
+[[paper](https://arxiv.org/abs/2407.07457)], [[repo](https://github.com/NineAbyss/GLBench)] <br>
+Yuhan Li^, **Peisong Wang**^, Xiao Zhu, Aochuan Chen, Haiyun Jiang, Deng Cai, Victor Wai Kin Chan, Jia Li. <br>
 Arxiv 2024 <br>
 
 * Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems. <br>
