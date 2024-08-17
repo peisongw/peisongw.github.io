@@ -6,8 +6,7 @@ author_profile: true
 (^=equal contribution)
 ##  2024
 
-* GLBench: A Comprehensive Benchmark for Graph with Large Language Models
-. <br>
+* GLBench: A Comprehensive Benchmark for Graph with Large Language Models. <br>
 [[paper](https://arxiv.org/abs/2407.07457)], [[repo](https://github.com/NineAbyss/GLBench)] <br>
 Yuhan Li^, **Peisong Wang**^, Xiao Zhu, Aochuan Chen, Haiyun Jiang, Deng Cai, Victor Wai Kin Chan, Jia Li. <br>
 Arxiv 2024 <br>
