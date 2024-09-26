@@ -26,6 +26,8 @@ Research Interest
 
 News
 ======
+2024.9 Our paper [GLBench: A Comprehensive Benchmark for Graph with Large Language Models](https://arxiv.org/abs/2407.07457) accepted by NeurIPS'24 Dataset&Benchmark track!
+
 2024.7 I start my internship in Tencent and I am involved in the optimization of the large language model "Hunyuan".
 
 2024.6 Our research paper Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems accepted by WSC'24 (Top conference in Simulation)!

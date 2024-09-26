@@ -9,7 +9,7 @@ author_profile: true
 * GLBench: A Comprehensive Benchmark for Graph with Large Language Models. <br>
 [[paper](https://arxiv.org/abs/2407.07457)], [[repo](https://github.com/NineAbyss/GLBench)] <br>
 Yuhan Li^, **Peisong Wang**^, Xiao Zhu, Aochuan Chen, Haiyun Jiang, Deng Cai, Victor Wai Kin Chan, Jia Li. <br>
-Arxiv 2024 <br>
+NeurIPS 2024 <br>
 
 * Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems. <br>
 Feixue Liu, Yuqing Miao, Yun Ye, **Peisong Wang**, Xinglu Liu, Kai Zhang, Wai Kin (Victor) Chan <br>
