@@ -26,6 +26,8 @@ Research Interest
 
 News
 ======
+2025.2 We release our reseach on the reasoning ability of LLMs [S²R: Teaching LLMs to Self-verify and Self-correct via Reinforcement Learning](https://www.arxiv.org/abs/2502.12853).
+
 2024.9 Our paper [GLBench: A Comprehensive Benchmark for Graph with Large Language Models](https://arxiv.org/abs/2407.07457) accepted by NeurIPS'24 Datasets and Benchmarks Track!
 
 2024.7 I start my internship in Tencent and conduct researches on LLMs.
