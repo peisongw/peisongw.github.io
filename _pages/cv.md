@@ -20,7 +20,7 @@ Work experience
 ======
 * 2024.7-now: Applied Research Intern
   * Tencent, Shenzhen, China
-  * Mentor: Rui Sun
+  * Mentor: Ruotian Ma, Rui Sun
 
 
 * 2023.7-2023.11: Algorithm Engineer Intern
