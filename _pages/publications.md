@@ -25,6 +25,6 @@ WSC 2024 <br>
 Yuhan Li, **Peisong Wang**, Zhixun Li, Jeffrey Xu Yu, Jia Li <br>
 KDD 2024 <br>
 
-* A Survey of Graph Meets Large Language Model: Progress and Future Directions. [[PDF](https://arxiv.org/abs/2311.12399)], [[repo](https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks)] <br>
+* A Survey of Graph Meets Large Language Model: Progress and Future Directions. [[paper](https://arxiv.org/abs/2311.12399)], [[repo](https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks)] <br>
 Yuhan Li^, Zhixun Li^, **Peisong Wang**^, Jia Li, Xiangguo Sun, Hong Cheng, Jeffrey Xu Yu. <br>
 IJCAI 2024 <br>
