@@ -4,6 +4,11 @@ permalink: /publications/
 author_profile: true
 ---
 (^=equal contribution)
+##  2025
+
+* S²R: Teaching LLMs to Self-verify and Self-correct via Reinforcement Learning. [[paper](https://arxiv.org/abs/2502.12853)], [[repo](https://github.com/NineAbyss/S2R)] <br>
+Ruotian Ma^, **Peisong Wang**^, Cheng Liu, Xingyan Liu, Jiaqi Chen, Bang Zhang, Xin Zhou, Nan Du, Jia Li
+
 ##  2024
 
 * GLBench: A Comprehensive Benchmark for Graph with Large Language Models. <br>
@@ -12,6 +17,7 @@ Yuhan Li^, **Peisong Wang**^, Xiao Zhu, Aochuan Chen, Haiyun Jiang, Deng Cai, Vi
 NeurIPS 2024 <br>
 
 * Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems. <br>
+[[paper](https://dl.acm.org/doi/10.5555/3712729.3712782)]
 Feixue Liu, Yuqing Miao, Yun Ye, **Peisong Wang**, Xinglu Liu, Kai Zhang, Wai Kin (Victor) Chan <br>
 WSC 2024 <br>
 
