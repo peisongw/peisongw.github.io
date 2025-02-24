@@ -32,7 +32,7 @@ News
 
 2024.7 I start my internship in Tencent and conduct researches on LLMs.
 
-2024.6 Our research paper Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems accepted by WSC'24 (Top conference in Simulation)!
+2024.6 Our research paper [Data-driven Uncertainty Revenue Modeling for Computation Resource Allocation in Recommendation Systems](https://dl.acm.org/doi/10.5555/3712729.3712782) accepted by WSC'24 (Top conference in Simulation)!
 
 2024.5 Our research paper [ZeroG: Investigating Cross-dataset Zero-shot Transferability in Graphs](https://arxiv.org/abs/2402.11235) accepted by KDD'24!
 
