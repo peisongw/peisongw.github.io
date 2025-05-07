@@ -5,9 +5,9 @@ author_profile: true
 ---
 
 {% include base_path %}
-To be updated.
-<!-- ## Why we need Graph?
-======
+
+## To be updated.
+<!-- ======
 
 ## If graph still outperforms in the era of LLM?
 ======
