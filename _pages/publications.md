@@ -5,8 +5,16 @@ author_profile: true
 ---
 (^=equal contribution)
 ##  2025
+* Sentient Agent as a Judge: Evaluating Higher-Order Social Cognition in Large Language Models. <br>
+[[paper](https://arxiv.org/abs/2505.02847)]<br>
+Bang Zhang^, Ruotian Ma^, Qingxuan Jiang^, **Peisong Wang**^, Jiaqi Chen, Zheng Xie, Xingyu Chen, Yue Wang, Fanghua Ye, Jian Li, Yifan Yang, Zhaopeng Tu, Xiaolong Li
 
-* S²R: Teaching LLMs to Self-verify and Self-correct via Reinforcement Learning. [[paper](https://arxiv.org/abs/2502.12853)], [[repo](https://github.com/NineAbyss/S2R)] <br>
+* SPC: Evolving Self-Play Critic via Adversarial Games for LLM Reasoning. <br>
+[[paper](https://arxiv.org/abs/2504.19162)]<br>
+Jiaqi Chen, Bang Zhang, Ruotian Ma, **Peisong Wang**, Xiaodan Liang, Zhaopeng Tu, Xiaolong Li, Kwan-Yee K. Wong
+
+* S²R: Teaching LLMs to Self-verify and Self-correct via Reinforcement Learning. <br>
+[[paper](https://arxiv.org/abs/2502.12853)], [[repo](https://github.com/NineAbyss/S2R)] <br>
 Ruotian Ma^, **Peisong Wang**^, Cheng Liu, Xingyan Liu, Jiaqi Chen, Bang Zhang, Xin Zhou, Nan Du, Jia Li
 
 ##  2024
