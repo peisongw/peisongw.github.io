@@ -26,6 +26,8 @@ Research Interest
 
 News
 ======
+2025.4 We introduce a novel approach where a critic model evolves its ability to assess reasoning steps through adversarial self-play games, eliminating the need for manual step-level annotation. [SPC: Evolving Self-Play Critic via Adversarial Games for LLM Reasoning](https://arxiv.org/abs/2504.19162).
+
 2025.2 We release our reseach on the reasoning ability of LLMs [S²R: Teaching LLMs to Self-verify and Self-correct via Reinforcement Learning](https://www.arxiv.org/abs/2502.12853).
 
 2024.9 Our paper [GLBench: A Comprehensive Benchmark for Graph with Large Language Models](https://arxiv.org/abs/2407.07457) accepted by NeurIPS'24 Datasets and Benchmarks Track!
