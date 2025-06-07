@@ -147,11 +147,11 @@
                     keyboard: true
                 });
                 
-                // 添加地图图层
-                const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                // 添加地图图层 - 使用高德地图瓦片服务
+                const tileLayer = L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+                    attribution: '© <a href="https://www.amap.com/">高德地图</a>',
                     maxZoom: 18,
-                    subdomains: ['a', 'b', 'c']
+                    subdomains: ['webrd01', 'webrd02', 'webrd03', 'webrd04']
                 });
                 tileLayer.addTo(map);
                 
