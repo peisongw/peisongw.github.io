@@ -120,13 +120,7 @@ author_profile: true
 
 <div class="travel-intro">
     <h2>🌍 My Travel Map</h2>
-    
-    <div class="travel-stats">
-        <div class="stat-item">
-            <span class="stat-number" id="cityCount">0</span>
-            <span class="stat-label">City</span>
-        </div>
-    </div>
+    <p>记录走过的每一个城市，收藏旅途中的美好回忆</p>
 </div>
 
 <div class="map-container">
@@ -166,19 +160,6 @@ const visitedPlaces = [
     }
 ];
 
-// 计算统计数据
-function calculateStats() {
-    console.log('计算统计数据:', visitedPlaces.length);
-    const cityCount = visitedPlaces.length;
-    const cityCountElement = document.getElementById('cityCount');
-    if (cityCountElement) {
-        cityCountElement.textContent = cityCount;
-        console.log('更新城市数量为:', cityCount);
-    } else {
-        console.error('找不到cityCount元素');
-    }
-}
-
 // 生成城市卡片
 function generatePlaceCards() {
     console.log('生成城市卡片');
@@ -210,7 +191,6 @@ function generatePlaceCards() {
 // 初始化函数
 function initializePage() {
     console.log('页面开始初始化');
-    calculateStats();
     generatePlaceCards();
     console.log('页面初始化完成');
 }
@@ -226,19 +206,6 @@ if (document.readyState === 'loading') {
 // 备用初始化（确保执行）
 setTimeout(function() {
     console.log('备用初始化执行');
-    const cityCountElement = document.getElementById('cityCount');
-    if (cityCountElement && cityCountElement.textContent === '0') {
-        console.log('检测到统计数字未更新，强制更新');
-        initializePage();
-    }
+    initializePage();
 }, 500);
-
-// 再次备用初始化
-setTimeout(function() {
-    const cityCountElement = document.getElementById('cityCount');
-    if (cityCountElement && cityCountElement.textContent === '0') {
-        console.log('最终强制更新统计数字');
-        cityCountElement.textContent = visitedPlaces.length;
-    }
-}, 1000);
 </script> 
