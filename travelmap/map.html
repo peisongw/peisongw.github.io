@@ -339,14 +339,11 @@
                 
                 // 创建自定义标记图标
                 function createCustomIcon(cityName) {
-                    // 获取城市名的第一个字符
-                    const firstChar = cityName.charAt(0).toUpperCase();
-                    
                     return L.divIcon({
                         className: 'custom-div-icon',
                         html: `
                             <div class="travel-marker">
-                                <span>${firstChar}</span>
+                                <span>📍</span>
                             </div>
                         `,
                         iconSize: [22, 22],
