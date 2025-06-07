@@ -186,19 +186,18 @@ function calculateStats() {
 function generatePlaceCards() {
     const placesGrid = document.getElementById('placesGrid');
     
-    // 按年份和国家分组排序
+    // 按国家和城市名排序
     const sortedPlaces = visitedPlaces.sort((a, b) => {
-        if (a.year !== b.year) {
-            return b.year.localeCompare(a.year); // 按年份降序
+        if (a.country !== b.country) {
+            return a.country.localeCompare(b.country, 'en'); // 按国家排序
         }
-        return a.country.localeCompare(b.country, 'zh-CN'); // 按国家排序
+        return a.name.localeCompare(b.name, 'en'); // 按城市名排序
     });
     
     const cardsHTML = sortedPlaces.map(place => `
         <div class="place-card">
             <div class="place-name">${place.name}</div>
             <div class="place-country">${place.country}</div>
-            <div class="place-year">${place.year}</div>
         </div>
     `).join('');
     

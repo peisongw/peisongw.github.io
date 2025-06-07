@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Leaflet CSS -->
+    <!-- Leaflet CSS from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
           crossorigin=""/>
     
-    <!-- Leaflet MarkerCluster CSS -->
-    <link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
+    <!-- MarkerCluster CSS from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     
     <style>
         html, body {
@@ -29,31 +29,19 @@
         
         .custom-popup {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-width: 150px;
+            min-width: 120px;
         }
         
         .popup-title {
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-size: 16px;
         }
         
         .popup-info {
             color: #7f8c8d;
             font-size: 13px;
-            margin-bottom: 4px;
-        }
-        
-        .popup-year {
-            color: #667eea;
-            font-size: 12px;
-            font-weight: 500;
-            background: rgba(102, 126, 234, 0.1);
-            padding: 2px 6px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 5px;
         }
         
         .travel-marker {
@@ -108,188 +96,205 @@
     
     <div id="map"></div>
     
-    <!-- Leaflet JavaScript -->
+    <!-- Leaflet JavaScript from CDN -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
             crossorigin=""></script>
     
-    <!-- Leaflet MarkerCluster JavaScript -->
-    <script src="leaflet_dist/leaflet.markercluster-src.js"></script>
+    <!-- MarkerCluster JavaScript from CDN -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     
     <script>
         // 初始化地图
         function initMap() {
-            // 创建地图，以世界为中心
-            const map = L.map('map', {
-                center: [30, 10],
-                zoom: 2,
-                zoomControl: true,
-                scrollWheelZoom: true,
-                doubleClickZoom: true,
-                boxZoom: true,
-                keyboard: true
-            });
-            
-            // 添加地图图层
-            const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                maxZoom: 18,
-                subdomains: ['a', 'b', 'c']
-            });
-            tileLayer.addTo(map);
-            
-            // 创建标记集群组
-            const markers = L.markerClusterGroup({
-                showCoverageOnHover: false,
-                maxClusterRadius: 60,
-                spiderfyOnMaxZoom: true,
-                removeOutsideVisibleBounds: true,
-                animate: true,
-                chunkedLoading: true
-            });
-            
-            // 从localStorage获取城市数据
-            function loadCities() {
-                try {
-                    const saved = localStorage.getItem('travelCities');
-                    return saved ? JSON.parse(saved) : [];
-                } catch (error) {
-                    console.error('读取城市数据失败:', error);
-                    return [];
-                }
-            }
-            
-            // 创建自定义标记图标
-            function createCustomIcon(cityName) {
-                // 获取城市名的第一个字符
-                const firstChar = cityName.charAt(0).toUpperCase();
-                
-                return L.divIcon({
-                    className: 'custom-div-icon',
-                    html: `
-                        <div class="travel-marker">
-                            <span>${firstChar}</span>
-                        </div>
-                    `,
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 15],
-                    popupAnchor: [0, -30]
+            try {
+                // 创建地图，以世界为中心
+                const map = L.map('map', {
+                    center: [30, 10],
+                    zoom: 2,
+                    zoomControl: true,
+                    scrollWheelZoom: true,
+                    doubleClickZoom: true,
+                    boxZoom: true,
+                    keyboard: true
                 });
-            }
-            
-            // 添加城市标记
-            function addCityMarkers() {
-                const cities = loadCities();
                 
-                if (cities.length === 0) {
-                    // 显示空状态
-                    document.body.insertAdjacentHTML('beforeend', `
-                        <div class="empty-state">
-                            <div style="font-size: 48px; margin-bottom: 15px;">🌍</div>
-                            <div style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">还没有旅行记录</div>
-                            <div style="font-size: 14px;">在页面代码中添加您去过的地方来显示标记</div>
-                        </div>
-                    `);
-                    return;
+                // 添加地图图层
+                const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                    maxZoom: 18,
+                    subdomains: ['a', 'b', 'c']
+                });
+                tileLayer.addTo(map);
+                
+                // 创建标记集群组
+                const markers = L.markerClusterGroup({
+                    showCoverageOnHover: false,
+                    maxClusterRadius: 60,
+                    spiderfyOnMaxZoom: true,
+                    removeOutsideVisibleBounds: true,
+                    animate: true,
+                    chunkedLoading: true
+                });
+                
+                // 从localStorage获取城市数据
+                function loadCities() {
+                    try {
+                        const saved = localStorage.getItem('travelCities');
+                        return saved ? JSON.parse(saved) : [];
+                    } catch (error) {
+                        console.error('读取城市数据失败:', error);
+                        return [];
+                    }
                 }
                 
-                cities.forEach((city) => {
-                    const marker = L.marker([city.lat, city.lng], {
-                        icon: createCustomIcon(city.name)
+                // 创建自定义标记图标
+                function createCustomIcon(cityName) {
+                    // 获取城市名的第一个字符
+                    const firstChar = cityName.charAt(0).toUpperCase();
+                    
+                    return L.divIcon({
+                        className: 'custom-div-icon',
+                        html: `
+                            <div class="travel-marker">
+                                <span>${firstChar}</span>
+                            </div>
+                        `,
+                        iconSize: [30, 30],
+                        iconAnchor: [15, 15],
+                        popupAnchor: [0, -30]
+                    });
+                }
+                
+                // 添加城市标记
+                function addCityMarkers() {
+                    const cities = loadCities();
+                    
+                    if (cities.length === 0) {
+                        // 显示空状态
+                        document.body.insertAdjacentHTML('beforeend', `
+                            <div class="empty-state">
+                                <div style="font-size: 48px; margin-bottom: 15px;">🌍</div>
+                                <div style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">还没有旅行记录</div>
+                                <div style="font-size: 14px;">在页面代码中添加您去过的地方来显示标记</div>
+                            </div>
+                        `);
+                        return;
+                    }
+                    
+                    cities.forEach((city) => {
+                        const marker = L.marker([city.lat, city.lng], {
+                            icon: createCustomIcon(city.name)
+                        });
+                        
+                        const popupContent = `
+                            <div class="custom-popup">
+                                <div class="popup-title">${city.name}</div>
+                                <div class="popup-info">${city.country}</div>
+                            </div>
+                        `;
+                        
+                        marker.bindPopup(popupContent);
+                        markers.addLayer(marker);
                     });
                     
-                    const popupContent = `
-                        <div class="custom-popup">
-                            <div class="popup-title">${city.name}</div>
-                            <div class="popup-info">${city.country}</div>
-                            <div class="popup-year">访问年份: ${city.year}</div>
-                        </div>
-                    `;
+                    map.addLayer(markers);
                     
-                    marker.bindPopup(popupContent);
-                    markers.addLayer(marker);
-                });
-                
-                map.addLayer(markers);
-                
-                // 调整地图视图以显示所有标记
-                if (cities.length > 0) {
-                    const group = new L.featureGroup(markers.getLayers());
-                    const bounds = group.getBounds();
-                    
-                    if (bounds.isValid()) {
-                        // 如果只有一个标记，使用适当的缩放级别
-                        if (cities.length === 1) {
-                            map.setView([cities[0].lat, cities[0].lng], 10);
-                        } else {
-                            map.fitBounds(bounds.pad(0.1));
+                    // 调整地图视图以显示所有标记
+                    if (cities.length > 0) {
+                        const group = new L.featureGroup(markers.getLayers());
+                        const bounds = group.getBounds();
+                        
+                        if (bounds.isValid()) {
+                            // 如果只有一个标记，使用适当的缩放级别
+                            if (cities.length === 1) {
+                                map.setView([cities[0].lat, cities[0].lng], 10);
+                            } else {
+                                map.fitBounds(bounds.pad(0.1));
+                            }
                         }
                     }
                 }
+                
+                // 监听localStorage变化
+                window.addEventListener('storage', function(e) {
+                    if (e.key === 'travelCities') {
+                        // 清除现有标记
+                        markers.clearLayers();
+                        // 移除空状态提示
+                        const emptyState = document.querySelector('.empty-state');
+                        if (emptyState) {
+                            emptyState.remove();
+                        }
+                        // 重新加载标记
+                        addCityMarkers();
+                    }
+                });
+                
+                // 定期检查localStorage更新
+                let lastCitiesData = JSON.stringify(loadCities());
+                setInterval(() => {
+                    const currentData = JSON.stringify(loadCities());
+                    if (currentData !== lastCitiesData) {
+                        lastCitiesData = currentData;
+                        markers.clearLayers();
+                        // 移除空状态提示
+                        const emptyState = document.querySelector('.empty-state');
+                        if (emptyState) {
+                            emptyState.remove();
+                        }
+                        addCityMarkers();
+                    }
+                }, 1000);
+                
+                // 初始加载标记
+                addCityMarkers();
+                
+                // 添加地图控件
+                L.control.scale({
+                    position: 'bottomright'
+                }).addTo(map);
+                
+                return map;
+                
+            } catch (error) {
+                console.error('地图初始化失败:', error);
+                showError('地图初始化失败，请刷新页面重试');
+                throw error;
             }
-            
-            // 监听localStorage变化
-            window.addEventListener('storage', function(e) {
-                if (e.key === 'travelCities') {
-                    // 清除现有标记
-                    markers.clearLayers();
-                    // 移除空状态提示
-                    const emptyState = document.querySelector('.empty-state');
-                    if (emptyState) {
-                        emptyState.remove();
-                    }
-                    // 重新加载标记
-                    addCityMarkers();
-                }
-            });
-            
-            // 定期检查localStorage更新
-            let lastCitiesData = JSON.stringify(loadCities());
-            setInterval(() => {
-                const currentData = JSON.stringify(loadCities());
-                if (currentData !== lastCitiesData) {
-                    lastCitiesData = currentData;
-                    markers.clearLayers();
-                    // 移除空状态提示
-                    const emptyState = document.querySelector('.empty-state');
-                    if (emptyState) {
-                        emptyState.remove();
-                    }
-                    addCityMarkers();
-                }
-            }, 1000);
-            
-            // 初始加载标记
-            addCityMarkers();
-            
-            // 隐藏加载消息
+        }
+        
+        // 显示错误信息
+        function showError(message) {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.innerHTML = `
+                    <div style="color: #e74c3c;">
+                        <div style="font-size: 18px; margin-bottom: 10px;">❌ ${message}</div>
+                        <div style="font-size: 14px;">请检查网络连接或刷新页面</div>
+                    </div>
+                `;
+            }
+        }
+        
+        // 隐藏加载消息
+        function hideLoading() {
             setTimeout(() => {
                 const loading = document.getElementById('loading');
                 if (loading) {
                     loading.style.display = 'none';
                 }
             }, 800);
-            
-            // 添加地图控件
-            L.control.scale({
-                position: 'bottomright'
-            }).addTo(map);
-            
-            return map;
         }
         
         // 当页面加载完成时初始化地图
         document.addEventListener('DOMContentLoaded', function() {
             try {
                 initMap();
+                hideLoading();
             } catch (error) {
-                console.error('地图初始化失败:', error);
-                document.getElementById('loading').innerHTML = `
-                    <div style="color: #e74c3c;">
-                        <div style="font-size: 18px; margin-bottom: 10px;">❌ 地图加载失败</div>
-                        <div style="font-size: 14px;">请刷新页面重试</div>
-                    </div>
-                `;
+                console.error('页面初始化失败:', error);
+                showError('页面加载失败');
             }
         });
     </script>
