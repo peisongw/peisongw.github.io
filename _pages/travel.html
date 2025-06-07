@@ -170,11 +170,7 @@ const visitedPlaces = [
 // 计算统计数据
 function calculateStats() {
     const cityCount = visitedPlaces.length;
-    const countries = [...new Set(visitedPlaces.map(place => place.country))];
-    const countryCount = countries.length;
-    
     document.getElementById('cityCount').textContent = cityCount;
-    document.getElementById('countryCount').textContent = countryCount;
 }
 
 // 生成城市卡片
