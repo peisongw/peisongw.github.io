@@ -20,9 +20,7 @@ I graduated from Shenzhen Foreign Language School in 2018.
 
 Research Interest
 ======
-* Data mining, especially graph learning.<br>
-
-* Large language model, especially its fusion with graph.
+* Large Language Model, Data Mining.
 
 News
 ======
