@@ -220,12 +220,25 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializePage);
 } else {
     // 如果文档已经加载完成
-    initializePage();
+    setTimeout(initializePage, 10);
 }
 
 // 备用初始化（确保执行）
 setTimeout(function() {
     console.log('备用初始化执行');
-    initializePage();
-}, 100);
+    const cityCountElement = document.getElementById('cityCount');
+    if (cityCountElement && cityCountElement.textContent === '0') {
+        console.log('检测到统计数字未更新，强制更新');
+        initializePage();
+    }
+}, 500);
+
+// 再次备用初始化
+setTimeout(function() {
+    const cityCountElement = document.getElementById('cityCount');
+    if (cityCountElement && cityCountElement.textContent === '0') {
+        console.log('最终强制更新统计数字');
+        cityCountElement.textContent = visitedPlaces.length;
+    }
+}, 1000);
 </script> 
