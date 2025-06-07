@@ -164,40 +164,68 @@ const visitedPlaces = [
         lat: 22.3193,
         lng: 114.1694
     }
-    // 您可以继续添加更多城市...
 ];
 
 // 计算统计数据
 function calculateStats() {
+    console.log('计算统计数据:', visitedPlaces.length);
     const cityCount = visitedPlaces.length;
-    document.getElementById('cityCount').textContent = cityCount;
+    const cityCountElement = document.getElementById('cityCount');
+    if (cityCountElement) {
+        cityCountElement.textContent = cityCount;
+        console.log('更新城市数量为:', cityCount);
+    } else {
+        console.error('找不到cityCount元素');
+    }
 }
 
 // 生成城市卡片
 function generatePlaceCards() {
+    console.log('生成城市卡片');
     const placesGrid = document.getElementById('placesGrid');
+    if (!placesGrid) {
+        console.error('找不到placesGrid元素');
+        return;
+    }
     
     // 按国家和城市名排序
     const sortedPlaces = visitedPlaces.sort((a, b) => {
         if (a.country !== b.country) {
-            return a.country.localeCompare(b.country, 'en'); // 按国家排序
+            return a.country.localeCompare(b.country, 'en');
         }
-        return a.name.localeCompare(b.name, 'en'); // 按城市名排序
+        return a.name.localeCompare(b.name, 'en');
     });
     
-    const cardsHTML = sortedPlaces.map(place => `
-        <div class="place-card">
-            <div class="place-name">${place.name}</div>
-            <div class="place-country">${place.country}</div>
-        </div>
-    `).join('');
+    const cardsHTML = sortedPlaces.map(place => 
+        '<div class="place-card">' +
+            '<div class="place-name">' + place.name + '</div>' +
+            '<div class="place-country">' + place.country + '</div>' +
+        '</div>'
+    ).join('');
     
     placesGrid.innerHTML = cardsHTML;
+    console.log('城市卡片生成完成，共', sortedPlaces.length, '个城市');
+}
+
+// 初始化函数
+function initializePage() {
+    console.log('页面开始初始化');
+    calculateStats();
+    generatePlaceCards();
+    console.log('页面初始化完成');
 }
 
 // 页面加载时初始化
-document.addEventListener('DOMContentLoaded', function() {
-    calculateStats();
-    generatePlaceCards();
-});
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePage);
+} else {
+    // 如果文档已经加载完成
+    initializePage();
+}
+
+// 备用初始化（确保执行）
+setTimeout(function() {
+    console.log('备用初始化执行');
+    initializePage();
+}, 100);
 </script> 
