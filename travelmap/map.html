@@ -107,30 +107,216 @@
     <script>
         // 旅行数据 - 直接在地图页面中定义
         const visitedPlaces = [
-            {
-                name: "Beijing",
-                country: "China",
-                lat: 39.9042,
-                lng: 116.4074
-            },
-            {
-                name: "Shanghai",
-                country: "China", 
-                lat: 31.2304,
-                lng: 121.4737
-            },
-            {
-                name: "Tokyo",
-                country: "Japan",
-                lat: 35.6762,
-                lng: 139.6503
-            },
-            {
-                name: "Hong Kong",
-                country: "China",
-                lat: 22.3193,
-                lng: 114.1694
-            }
+        {
+        name: "Beijing",
+        country: "China",
+        lat: 39.9042,
+        lng: 116.4074
+    },
+    {
+        name: "Shanghai",
+        country: "China", 
+        lat: 31.2304,
+        lng: 121.4737
+    },
+    {
+        name: "Tokyo",
+        country: "Japan",
+        lat: 35.6762,
+        lng: 139.6503
+    },
+    {
+        name: "Hong Kong",
+        country: "China",
+        lat: 22.3193,
+        lng: 114.1694
+    },
+    {
+        name: "Osaka",
+        country: "Japan",
+        lat: 34.6937,
+        lng: 135.5023
+    },
+    {
+        name: "Jeju Island",
+        country: "South Korea",
+        lat: 33.4577,
+        lng: 126.5323
+    },
+    {
+        name: "Los Angeles",
+        country: "United States",
+        lat: 34.0522,
+        lng: -118.2437
+    },
+    {
+        name: "New York",
+        country: "United States",
+        lat: 40.7128,
+        lng: -74.0060
+    },
+    {
+        name: "Washington D.C.",
+        country: "United States",
+        lat: 38.8951,
+        lng: -77.0364
+    },
+    {
+        name: "Shenzhen",
+        country: "China",
+        lat: 22.5431,
+        lng: 114.0579
+    },
+    {
+        name: "Guangzhou",
+        country: "China",
+        lat: 23.1291,
+        lng: 113.2644
+    },
+    {
+        name: "Chengdu",
+        country: "China",
+        lat: 30.5728,
+        lng: 104.0668
+    },
+    {
+        name: "Chongqing",
+        country: "China",
+        lat: 29.5628,
+        lng: 106.5527
+    },
+    {
+        name: "Hefei",
+        country: "China",
+        lat: 31.8639,
+        lng: 117.2808
+    },
+    {
+        name: "Hangzhou",
+        country: "China",
+        lat: 30.2741,
+        lng: 120.1550
+    },
+    {
+        name: "Fuyang",
+        country: "China",
+        lat: 30.2741,
+        lng: 120.1550
+    },
+    {
+        name: "Xi'an",
+        country: "China",
+        lat: 34.3416,
+        lng: 108.9402
+    },
+    {
+        name: "Zhongshan",
+        country: "China",
+        lat: 22.5196,
+        lng: 113.3625
+    },
+    {
+        name: "Zhuhai",
+        country: "China",
+        lat: 22.2769,
+        lng: 113.5630
+    },
+    {
+        name: "Lijiang",
+        country: "China",
+        lat: 26.8553,
+        lng: 100.0407
+    },
+    {
+        name: "Dali",
+        country: "China",
+        lat: 25.2820,
+        lng: 100.0050
+    },
+    {
+        name: "Kunming",
+        country: "China",
+        lat: 25.0406,
+        lng: 102.7085
+    },
+    {
+        name: "Zhengzhou",
+        country: "China",
+        lat: 34.7466,
+        lng: 113.6602
+    },
+    {
+        name: "Ningbo",
+        country: "China",
+        lat: 29.8683,
+        lng: 121.5495
+    },
+    {
+        name: "Shenyang",
+        country: "China",
+        lat: 41.7961,
+        lng: 123.4291
+    },
+    {
+        name: "Changchun",
+        country: "China",
+        lat: 43.8807,
+        lng: 125.3245
+    },
+    {
+        name: "Huanggang",
+        country: "China",
+        lat: 30.4475,
+        lng: 114.8723
+    },
+    {
+        name: "Harbin",
+        country: "China",
+        lat: 45.8019,
+        lng: 126.5315
+    },
+    {
+        name: "Huizhou",
+        country: "China",
+        lat: 23.0995,
+        lng: 114.3924
+    },
+    {
+        name: "Dongguan",
+        country: "China",
+        lat: 23.0208,
+        lng: 113.7518
+    },
+    {
+        name: "Jilin",
+        country: "China",
+        lat: 43.8807,
+        lng: 126.5494
+    },
+    {
+        name: "Suzhou",
+        country: "China",
+        lat: 31.3049,
+        lng: 120.6194
+    },
+    {
+        name: "Nanjing",
+        country: "China",
+        lat: 32.0617,
+        lng: 118.7778
+    },
+    {
+        name: "Huzhou",
+        country: "China",
+        lat: 30.8647,
+        lng: 120.0988
+    },
+    {
+        name: "Incheon",
+        country: "South Korea",
+        lat: 37.4819,
+        lng: 126.7793
+    },
         ];
 
         // 初始化地图
