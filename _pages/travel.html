@@ -1,252 +1,219 @@
 ---
 layout: archive
-title: "Travel Map"
+title: "My Travel Map"
 permalink: /travel/
 author_profile: true
 ---
 
 <style>
-.travel-controls {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.travel-intro {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.input-group {
+.travel-intro h2 {
+    margin: 0 0 15px 0;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.travel-intro p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.travel-stats {
     display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 15px;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
     flex-wrap: wrap;
 }
 
-.input-group input {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    min-width: 200px;
+.stat-item {
+    text-align: center;
 }
 
-.btn {
-    padding: 8px 16px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s;
+.stat-number {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.95);
 }
 
-.btn:hover {
-    background: #0056b3;
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
-.btn-danger {
-    background: #dc3545;
-}
-
-.btn-danger:hover {
-    background: #c82333;
-}
-
-.status-message {
-    padding: 10px;
-    border-radius: 4px;
-    margin-top: 10px;
-    display: none;
-}
-
-.status-success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.status-error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.visited-places {
-    margin-top: 15px;
-}
-
-.place-tag {
-    display: inline-block;
-    background: #e9ecef;
-    padding: 4px 8px;
-    margin: 2px;
+.map-container {
     border-radius: 12px;
-    font-size: 12px;
-    color: #495057;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.place-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #667eea;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.place-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.place-name {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.place-country {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.place-year {
+    color: #667eea;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .travel-stats {
+        gap: 20px;
+    }
+    
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .travel-intro {
+        padding: 20px;
+    }
+    
+    .travel-intro h2 {
+        font-size: 1.8em;
+    }
 }
 </style>
 
-<div class="travel-controls">
-    <h3>🗺️ 我的旅行地图</h3>
-    <p>在下面输入城市名称，将其添加到你的旅行地图中。支持中文和英文城市名。</p>
+<div class="travel-intro">
+    <h2>🌍 我的旅行足迹</h2>
+    <p>记录走过的每一个城市，收藏旅途中的美好回忆</p>
     
-    <div class="input-group">
-        <input type="text" id="cityInput" placeholder="输入城市名称 (例如：北京、Tokyo、New York)" />
-        <button class="btn" onclick="addCity()">添加城市</button>
-        <button class="btn btn-danger" onclick="clearAllCities()">清空所有</button>
-    </div>
-    
-    <div id="statusMessage" class="status-message"></div>
-    
-    <div class="visited-places">
-        <strong>已访问的地方：</strong>
-        <div id="visitedPlacesList"></div>
+    <div class="travel-stats">
+        <div class="stat-item">
+            <span class="stat-number" id="cityCount">0</span>
+            <span class="stat-label">城市</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="countryCount">0</span>
+            <span class="stat-label">国家/地区</span>
+        </div>
     </div>
 </div>
 
-<iframe src="/travelmap/map.html" height="700" width="100%" style="border:none; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+<div class="map-container">
+    <iframe src="/travelmap/map.html" height="500" width="100%" style="border:none;"></iframe>
+</div>
+
+<div class="places-grid" id="placesGrid">
+    <!-- 城市卡片将通过JavaScript动态生成 -->
+</div>
 
 <script>
-// 从localStorage获取已保存的城市
-function getSavedCities() {
-    const saved = localStorage.getItem('travelCities');
-    return saved ? JSON.parse(saved) : [];
-}
-
-// 保存城市到localStorage
-function saveCities(cities) {
-    localStorage.setItem('travelCities', JSON.stringify(cities));
-}
-
-// 显示状态消息
-function showMessage(message, isError = false) {
-    const messageDiv = document.getElementById('statusMessage');
-    messageDiv.textContent = message;
-    messageDiv.className = `status-message ${isError ? 'status-error' : 'status-success'}`;
-    messageDiv.style.display = 'block';
-    
-    setTimeout(() => {
-        messageDiv.style.display = 'none';
-    }, 3000);
-}
-
-// 更新已访问地方的显示
-function updateVisitedPlaces() {
-    const cities = getSavedCities();
-    const listDiv = document.getElementById('visitedPlacesList');
-    
-    if (cities.length === 0) {
-        listDiv.innerHTML = '<span style="color: #6c757d; font-style: italic;">还没有添加任何地方</span>';
-        return;
+// 您可以在这里编辑您去过的地方
+const visitedPlaces = [
+    {
+        name: "Beijing",
+        country: "China",
+        lat: 39.9042,
+        lng: 116.4074
+    },
+    {
+        name: "Shanghai",
+        country: "China", 
+        lat: 31.2304,
+        lng: 121.4737
+    },
+    {
+        name: "Tokyo",
+        country: "Japan",
+        lat: 35.6762,
+        lng: 139.6503
+    },
+    {
+        name: "Hong Kong",
+        country: "China",
+        lat: 22.3193,
+        lng: 114.1694
     }
+    // 您可以继续添加更多城市...
+];
+
+// 计算统计数据
+function calculateStats() {
+    const cityCount = visitedPlaces.length;
+    const countries = [...new Set(visitedPlaces.map(place => place.country))];
+    const countryCount = countries.length;
     
-    listDiv.innerHTML = cities.map(city => 
-        `<span class="place-tag">${city.name}</span>`
-    ).join('');
+    document.getElementById('cityCount').textContent = cityCount;
+    document.getElementById('countryCount').textContent = countryCount;
 }
 
-// 使用地理编码API获取城市坐标
-async function geocodeCity(cityName) {
-    try {
-        // 使用Nominatim地理编码服务
-        const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cityName)}&limit=1`);
-        const data = await response.json();
-        
-        if (data.length > 0) {
-            return {
-                name: data[0].display_name.split(',')[0], // 获取主要城市名
-                lat: parseFloat(data[0].lat),
-                lng: parseFloat(data[0].lon)
-            };
+// 生成城市卡片
+function generatePlaceCards() {
+    const placesGrid = document.getElementById('placesGrid');
+    
+    // 按年份和国家分组排序
+    const sortedPlaces = visitedPlaces.sort((a, b) => {
+        if (a.year !== b.year) {
+            return b.year.localeCompare(a.year); // 按年份降序
         }
-        return null;
-    } catch (error) {
-        console.error('地理编码错误:', error);
-        return null;
-    }
-}
-
-// 添加城市
-async function addCity() {
-    const input = document.getElementById('cityInput');
-    const cityName = input.value.trim();
+        return a.country.localeCompare(b.country, 'zh-CN'); // 按国家排序
+    });
     
-    if (!cityName) {
-        showMessage('请输入城市名称', true);
-        return;
-    }
+    const cardsHTML = sortedPlaces.map(place => `
+        <div class="place-card">
+            <div class="place-name">${place.name}</div>
+            <div class="place-country">${place.country}</div>
+            <div class="place-year">${place.year}</div>
+        </div>
+    `).join('');
     
-    // 显示加载状态
-    showMessage('正在查找城市位置...');
-    
-    try {
-        const cityData = await geocodeCity(cityName);
-        
-        if (!cityData) {
-            showMessage('未找到该城市，请检查拼写或尝试其他名称', true);
-            return;
-        }
-        
-        const cities = getSavedCities();
-        
-        // 检查是否已存在
-        const exists = cities.some(city => 
-            Math.abs(city.lat - cityData.lat) < 0.1 && 
-            Math.abs(city.lng - cityData.lng) < 0.1
-        );
-        
-        if (exists) {
-            showMessage('该城市已经在地图上了', true);
-            return;
-        }
-        
-        // 添加新城市
-        cities.push(cityData);
-        saveCities(cities);
-        
-        // 刷新地图
-        refreshMap();
-        
-        // 更新显示
-        updateVisitedPlaces();
-        
-        // 清空输入框
-        input.value = '';
-        
-        showMessage(`成功添加 ${cityData.name}`);
-        
-    } catch (error) {
-        console.error('添加城市出错:', error);
-        showMessage('添加城市时出现错误，请稍后重试', true);
-    }
+    placesGrid.innerHTML = cardsHTML;
 }
 
-// 清空所有城市
-function clearAllCities() {
-    if (confirm('确定要清空所有已添加的城市吗？')) {
-        localStorage.removeItem('travelCities');
-        refreshMap();
-        updateVisitedPlaces();
-        showMessage('已清空所有城市');
-    }
+// 将数据保存到localStorage供地图使用
+function saveDataForMap() {
+    localStorage.setItem('travelCities', JSON.stringify(visitedPlaces));
 }
 
-// 刷新地图
-function refreshMap() {
-    const iframe = document.querySelector('iframe');
-    iframe.src = iframe.src;
-}
-
-// 支持回车键添加城市
-document.getElementById('cityInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        addCity();
-    }
-});
-
-// 页面加载时更新显示
+// 页面加载时初始化
 document.addEventListener('DOMContentLoaded', function() {
-    updateVisitedPlaces();
+    calculateStats();
+    generatePlaceCards();
+    saveDataForMap();
 });
 </script> 
