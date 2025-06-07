@@ -119,17 +119,12 @@ author_profile: true
 </style>
 
 <div class="travel-intro">
-    <h2>🌍 我的旅行足迹</h2>
-    <p>记录走过的每一个城市，收藏旅途中的美好回忆</p>
+    <h2>🌍 My Travel Map</h2>
     
     <div class="travel-stats">
         <div class="stat-item">
             <span class="stat-number" id="cityCount">0</span>
-            <span class="stat-label">城市</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number" id="countryCount">0</span>
-            <span class="stat-label">国家/地区</span>
+            <span class="stat-label">City</span>
         </div>
     </div>
 </div>
@@ -204,15 +199,9 @@ function generatePlaceCards() {
     placesGrid.innerHTML = cardsHTML;
 }
 
-// 将数据保存到localStorage供地图使用
-function saveDataForMap() {
-    localStorage.setItem('travelCities', JSON.stringify(visitedPlaces));
-}
-
 // 页面加载时初始化
 document.addEventListener('DOMContentLoaded', function() {
     calculateStats();
     generatePlaceCards();
-    saveDataForMap();
 });
 </script> 

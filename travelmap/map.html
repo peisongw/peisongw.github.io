@@ -105,6 +105,34 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     
     <script>
+        // 旅行数据 - 直接在地图页面中定义
+        const visitedPlaces = [
+            {
+                name: "Beijing",
+                country: "China",
+                lat: 39.9042,
+                lng: 116.4074
+            },
+            {
+                name: "Shanghai",
+                country: "China", 
+                lat: 31.2304,
+                lng: 121.4737
+            },
+            {
+                name: "Tokyo",
+                country: "Japan",
+                lat: 35.6762,
+                lng: 139.6503
+            },
+            {
+                name: "Hong Kong",
+                country: "China",
+                lat: 22.3193,
+                lng: 114.1694
+            }
+        ];
+
         // 初始化地图
         function initMap() {
             try {
@@ -137,17 +165,6 @@
                     chunkedLoading: true
                 });
                 
-                // 从localStorage获取城市数据
-                function loadCities() {
-                    try {
-                        const saved = localStorage.getItem('travelCities');
-                        return saved ? JSON.parse(saved) : [];
-                    } catch (error) {
-                        console.error('读取城市数据失败:', error);
-                        return [];
-                    }
-                }
-                
                 // 创建自定义标记图标
                 function createCustomIcon(cityName) {
                     // 获取城市名的第一个字符
@@ -168,21 +185,19 @@
                 
                 // 添加城市标记
                 function addCityMarkers() {
-                    const cities = loadCities();
-                    
-                    if (cities.length === 0) {
+                    if (visitedPlaces.length === 0) {
                         // 显示空状态
                         document.body.insertAdjacentHTML('beforeend', `
                             <div class="empty-state">
                                 <div style="font-size: 48px; margin-bottom: 15px;">🌍</div>
                                 <div style="font-size: 18px; font-weight: 500; margin-bottom: 8px;">还没有旅行记录</div>
-                                <div style="font-size: 14px;">在页面代码中添加您去过的地方来显示标记</div>
+                                <div style="font-size: 14px;">在地图代码中添加您去过的地方来显示标记</div>
                             </div>
                         `);
                         return;
                     }
                     
-                    cities.forEach((city) => {
+                    visitedPlaces.forEach((city) => {
                         const marker = L.marker([city.lat, city.lng], {
                             icon: createCustomIcon(city.name)
                         });
@@ -201,51 +216,20 @@
                     map.addLayer(markers);
                     
                     // 调整地图视图以显示所有标记
-                    if (cities.length > 0) {
+                    if (visitedPlaces.length > 0) {
                         const group = new L.featureGroup(markers.getLayers());
                         const bounds = group.getBounds();
                         
                         if (bounds.isValid()) {
                             // 如果只有一个标记，使用适当的缩放级别
-                            if (cities.length === 1) {
-                                map.setView([cities[0].lat, cities[0].lng], 10);
+                            if (visitedPlaces.length === 1) {
+                                map.setView([visitedPlaces[0].lat, visitedPlaces[0].lng], 10);
                             } else {
                                 map.fitBounds(bounds.pad(0.1));
                             }
                         }
                     }
                 }
-                
-                // 监听localStorage变化
-                window.addEventListener('storage', function(e) {
-                    if (e.key === 'travelCities') {
-                        // 清除现有标记
-                        markers.clearLayers();
-                        // 移除空状态提示
-                        const emptyState = document.querySelector('.empty-state');
-                        if (emptyState) {
-                            emptyState.remove();
-                        }
-                        // 重新加载标记
-                        addCityMarkers();
-                    }
-                });
-                
-                // 定期检查localStorage更新
-                let lastCitiesData = JSON.stringify(loadCities());
-                setInterval(() => {
-                    const currentData = JSON.stringify(loadCities());
-                    if (currentData !== lastCitiesData) {
-                        lastCitiesData = currentData;
-                        markers.clearLayers();
-                        // 移除空状态提示
-                        const emptyState = document.querySelector('.empty-state');
-                        if (emptyState) {
-                            emptyState.remove();
-                        }
-                        addCityMarkers();
-                    }
-                }, 1000);
                 
                 // 初始加载标记
                 addCityMarkers();
