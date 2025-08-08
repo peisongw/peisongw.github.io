@@ -24,8 +24,8 @@ Research Interest
 
 News
 ======
-2025.5 Can today's LLMs truly understand you, not just your words? 🤖❤️
-Introducing [Sentient Agent as a Judge: Evaluating Higher-Order Social Cognition in Large Language Models](https://arxiv.org/abs/2505.02847) — the first evaluation framework that uses sentient agents to simulate human emotional dynamics and inner reasoning for assessing social cognition in LLM conversations. 
+2025.8 I have completed my one-year internship at Tencent! Here are [papers and technical reports I contributed to during my internship](https://www.linkedin.com/posts/peisong-wang-67b7292b4_llm-reasoning-degitalhuman-activity-7359573042290749442-x8ay?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuR9n8B9FYCPpLvr40XcSNN-0b8idvBPCg).
+ 
 
 2025.4 We introduce a novel approach where a critic model evolves its ability to assess reasoning steps through adversarial self-play games, eliminating the need for manual step-level annotation in thepaper [SPC: Evolving Self-Play Critic via Adversarial Games for LLM Reasoning](https://arxiv.org/abs/2504.19162).
 
