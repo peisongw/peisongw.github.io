@@ -10,9 +10,9 @@ redirect_from:
 
 > L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
 
-Hi! I am Peisong Wang (王沛松 in Chinese), currently a last-year master's student at Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.sigs.tsinghua.edu.cn/cwj_en/main.htm).
+Hi! I am Peisong Wang (王沛松 in Chinese), currently a first-year Ph.D student at the Hong Kong University of Science and Technology (Guangzhou), advised by Professor [Jia Li](https://sites.google.com/view/lijia). 
 
-I am an intern at the Information Thrust of Hong Kong University of Science and Technology, adviced by Professor [Jia Li](https://sites.google.com/view/lijia). 
+I received my Master's degree in Data Science and Information Technology in 2025 from Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.sigs.tsinghua.edu.cn/cwj_en/main.htm).
 
 I received my Bachelor’s degree in Information Engineering in 2022 from Beijing University of Posts and Telecommunications. 
 
