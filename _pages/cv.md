@@ -18,8 +18,8 @@ Education
 
 Work experience
 ======
-* 2024.7-now: Applied Research Intern
-  * Tencent, Shenzhen, China
+* 2024.7-2025.8: Applied Research Intern
+  * Tencent AI Lab, Tencent Hunyuan, Shenzhen, China
   * Mentor: Ruotian Ma, Rui Sun
 
 
