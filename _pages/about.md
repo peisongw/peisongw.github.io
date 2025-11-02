@@ -20,7 +20,7 @@ I graduated from Shenzhen Foreign Language School in 2018.
 
 Research Interest
 ======
-* Large Language Model, Data Mining.
+* LLM Reasoning and Agents.
 
 News
 ======
