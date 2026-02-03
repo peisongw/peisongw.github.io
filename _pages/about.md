@@ -24,6 +24,8 @@ Research Interest
 
 News
 ======
+2026.1 Our paper [RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents](https://arxiv.org/abs/2507.03112) accepted by ICLR'26!
+
 2025.8 I have completed my one-year internship at Tencent! Here are [Papers and Technical Reports I contributed to during my internship](https://www.linkedin.com/posts/peisong-wang-67b7292b4_llm-reasoning-degitalhuman-activity-7359573042290749442-x8ay?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuR9n8B9FYCPpLvr40XcSNN-0b8idvBPCg).
  
 
