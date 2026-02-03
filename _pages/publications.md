@@ -7,7 +7,7 @@ author_profile: true
 ##  2025
 * RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents. <br>
 [[paper](https://arxiv.org/abs/2507.03112)], [[repo](https://github.com/Tencent/DigitalHuman/tree/main/RLVER)]<br>
-Peisong Wang^, Ruotian Ma^, Bang Zhang^, Xingyu Chen, Zhiwei He, Kang Luo, Qingsong Lv, Qingxuan Jiang, Zheng Xie, Shanyi Wang, Yuan Li, Fanghua Ye, Jian Li, Yifan Yang, Jia Li, Zhaopeng Tu, Xiaolong Li
+**Peisong Wang**^, Ruotian Ma^, Bang Zhang^, Xingyu Chen, Zhiwei He, Kang Luo, Qingsong Lv, Qingxuan Jiang, Zheng Xie, Shanyi Wang, Yuan Li, Fanghua Ye, Jian Li, Yifan Yang, Jia Li, Zhaopeng Tu, Xiaolong Li
 ICLR 2026 <br>
 
 * Sentient Agent as a Judge: Evaluating Higher-Order Social Cognition in Large Language Models. <br>
