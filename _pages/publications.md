@@ -5,17 +5,24 @@ author_profile: true
 ---
 (^=equal contribution)
 ##  2025
+* RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents. <br>
+[[paper](https://arxiv.org/abs/2507.03112)], [[repo](https://github.com/Tencent/DigitalHuman/tree/main/RLVER)]<br>
+Peisong Wang^, Ruotian Ma^, Bang Zhang^, Xingyu Chen, Zhiwei He, Kang Luo, Qingsong Lv, Qingxuan Jiang, Zheng Xie, Shanyi Wang, Yuan Li, Fanghua Ye, Jian Li, Yifan Yang, Jia Li, Zhaopeng Tu, Xiaolong Li
+ICLR 2026 <br>
+
 * Sentient Agent as a Judge: Evaluating Higher-Order Social Cognition in Large Language Models. <br>
-[[paper](https://arxiv.org/abs/2505.02847)]<br>
+[[paper](https://arxiv.org/abs/2505.02847)], [[repo](https://github.com/Tencent/digitalhuman/tree/main/SAGE)]<br>
 Bang Zhang^, Ruotian Ma^, Qingxuan Jiang^, **Peisong Wang**^, Jiaqi Chen, Zheng Xie, Xingyu Chen, Yue Wang, Fanghua Ye, Jian Li, Yifan Yang, Zhaopeng Tu, Xiaolong Li
 
 * SPC: Evolving Self-Play Critic via Adversarial Games for LLM Reasoning. <br>
-[[paper](https://arxiv.org/abs/2504.19162)]<br>
+[[paper](https://arxiv.org/abs/2504.19162)], [[repo](https://github.com/chen-judge/SPC/)]<br>
 Jiaqi Chen, Bang Zhang, Ruotian Ma, **Peisong Wang**, Xiaodan Liang, Zhaopeng Tu, Xiaolong Li, Kwan-Yee K. Wong
+NeurIPS 2025 <br>
 
 * S²R: Teaching LLMs to Self-verify and Self-correct via Reinforcement Learning. <br>
 [[paper](https://arxiv.org/abs/2502.12853)], [[repo](https://github.com/NineAbyss/S2R)] <br>
 Ruotian Ma^, **Peisong Wang**^, Cheng Liu, Xingyan Liu, Jiaqi Chen, Bang Zhang, Xin Zhou, Nan Du, Jia Li
+ACL 2025 <br>
 
 ##  2024
 
