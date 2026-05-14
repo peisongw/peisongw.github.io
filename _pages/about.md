@@ -10,7 +10,7 @@ redirect_from:
 
 > L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
 
-Hi! I am Peisong Wang (王沛松 in Chinese), currently a first-year Ph.D student at the Hong Kong University of Science and Technology (Guangzhou), advised by Professor [Jia Li](https://sites.google.com/view/lijia). 
+Hi! I am Peisong Wang (王沛松 in Chinese), currently a first-year Ph.D student at the Hong Kong University of Science and Technology (Guangzhou), advised by Professor [Jia Li](https://sites.google.com/view/lijia) and Professor [Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/). 
 
 I received my Master's degree in Data Science and Information Technology in 2025 from Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.sigs.tsinghua.edu.cn/cwj_en/main.htm).
 
@@ -48,3 +48,8 @@ News
 Teaching
 ======
 HKUST (GZ) 2026 Spring UFUG 2602 - Data Structure and Algorithm Design (As TA).
+
+Services
+======
+Gold Reviewer of ICML2026
+Reviewer for WWW, NeurIPS, MM
