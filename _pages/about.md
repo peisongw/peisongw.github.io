@@ -51,5 +51,5 @@ HKUST (GZ) 2026 Spring UFUG 2602 - Data Structure and Algorithm Design (As TA).
 
 Services
 ======
-Gold Reviewer of ICML2026
-Reviewer for WWW, NeurIPS, MM
+Gold Reviewer of ICML2026.
+Reviewer for NeurIPS, WWW, MM.
