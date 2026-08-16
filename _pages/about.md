@@ -10,7 +10,7 @@ redirect_from:
 
 > L'humaine sagesse était tout entière dans ces deux mots: attendre et espérer!
 
-Hi! I am Peisong Wang (王沛松 in Chinese), currently a first-year Ph.D student at the Hong Kong University of Science and Technology (Guangzhou), advised by Professor [Jia Li](https://sites.google.com/view/lijia) and Professor [Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/). 
+Hi! I am Peisong Wang (王沛松 in Chinese), currently a second-year Ph.D. student at the Hong Kong University of Science and Technology (Guangzhou), advised by Professor [Jia Li](https://sites.google.com/view/lijia) and Professor [Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/).
 
 I received my Master's degree in Data Science and Information Technology in 2025 from Tsinghua University, advised by Professor [Wai Kin (Victor) Chan](https://www.sigs.tsinghua.edu.cn/cwj_en/main.htm).
 
@@ -24,6 +24,8 @@ Research Interest
 
 News
 ======
+2026.6 I started my research internship at WeChat, focusing on LLMs for Software Engineering (LLM4SE) and Coding Agents.
+
 2026.1 Our paper [RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents](https://arxiv.org/abs/2507.03112) is accepted by ICLR'26!
 
 2025.9 I start my doctoral program in HKUST (GZ).
