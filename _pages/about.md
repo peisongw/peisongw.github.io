@@ -24,7 +24,7 @@ Research Interest
 
 News
 ======
-2026.11 Our paper [CP-Agent: A Calibrated Risk-Controlled Agent for Feedback-Driven Competitive Programming](https://arxiv.org/abs/2605.24693) was accepted by WSDM'27 Findings!
+2026.11 Our paper [CP-Agent: A Calibrated Risk-Controlled Agent for Feedback-Driven Competitive Programming](https://arxiv.org/abs/2605.24693) was accepted as a Findings paper to WSDM'27!
 
 2026.10 We released [OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners](https://arxiv.org/abs/2610.24087). OR-License benchmarks LLM agents as real-world OR practitioners using industry-derived optimization problems from $3.68M in commissioned projects, evaluating end-to-end OR problem solving.
 
