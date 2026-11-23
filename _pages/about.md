@@ -24,6 +24,10 @@ Research Interest
 
 News
 ======
+2026.11 Our paper [CP-Agent: A Calibrated Risk-Controlled Agent for Feedback-Driven Competitive Programming](https://arxiv.org/abs/2605.24693) was accepted by WSDM'27 Findings!
+
+2026.10 We released [OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners](https://arxiv.org/abs/2610.24087). OR-License benchmarks LLM agents as real-world OR practitioners using industry-derived optimization problems from $3.68M in commissioned projects, evaluating end-to-end OR problem solving.
+
 2026.6 I started my research internship at WeChat, focusing on LLMs for Software Engineering (LLM4SE) and Coding Agents.
 
 2026.1 Our paper [RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents](https://arxiv.org/abs/2507.03112) is accepted by ICLR'26!
@@ -46,6 +50,10 @@ News
 2024.5 Our research paper [ZeroG: Investigating Cross-dataset Zero-shot Transferability in Graphs](https://arxiv.org/abs/2402.11235) is accepted by KDD'24!
 
 2024.4 Our survey [A Survey of Graph Meets Large Language Model: Progress and Future Directions](https://arxiv.org/abs/2311.12399) is accepted by IJCAI'24!
+
+Industrial Experience
+======
+Internships at WeChat Pay, Tencent Hunyuan, Tencent AI Lab, and CreateLink.
 
 Teaching
 ======
