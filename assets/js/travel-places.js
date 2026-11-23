@@ -1,0 +1,335 @@
+// 您可以在这里编辑您去过的地方
+const visitedPlaces = [
+    {
+        name: "Beijing",
+        country: "China",
+        lat: 39.9042,
+        lng: 116.4074
+    },
+    {
+        name: "Shanghai",
+        country: "China",
+        lat: 31.2304,
+        lng: 121.4737
+    },
+    {
+        name: "Tokyo",
+        country: "Japan",
+        lat: 35.6762,
+        lng: 139.6503
+    },
+    {
+        name: "Kamakura",
+        country: "Japan",
+        lat: 35.3192,
+        lng: 139.5467
+    },
+    {
+        name: "Hong Kong",
+        country: "China",
+        lat: 22.3193,
+        lng: 114.1694
+    },
+    {
+        name: "Osaka",
+        country: "Japan",
+        lat: 34.6937,
+        lng: 135.5023
+    },
+    {
+        name: "Jeju Island",
+        country: "South Korea",
+        lat: 33.4577,
+        lng: 126.5323
+    },
+    {
+        name: "Los Angeles",
+        country: "United States",
+        lat: 34.0522,
+        lng: -118.2437
+    },
+    {
+        name: "New York",
+        country: "United States",
+        lat: 40.7128,
+        lng: -74.0060
+    },
+    {
+        name: "Washington D.C.",
+        country: "United States",
+        lat: 38.8951,
+        lng: -77.0364
+    },
+    {
+        name: "Shenzhen",
+        country: "China",
+        lat: 22.5431,
+        lng: 114.0579
+    },
+    {
+        name: "Guangzhou",
+        country: "China",
+        lat: 23.1291,
+        lng: 113.2644
+    },
+    {
+        name: "Chengdu",
+        country: "China",
+        lat: 30.5728,
+        lng: 104.0668
+    },
+    {
+        name: "Chongqing",
+        country: "China",
+        lat: 29.5628,
+        lng: 106.5527
+    },
+    {
+        name: "Hefei",
+        country: "China",
+        lat: 31.8639,
+        lng: 117.2808
+    },
+    {
+        name: "Hangzhou",
+        country: "China",
+        lat: 30.2741,
+        lng: 120.1550
+    },
+    {
+        name: "Fuyang",
+        country: "China",
+        lat: 30.2741,
+        lng: 120.1550
+    },
+    {
+        name: "Xi'an",
+        country: "China",
+        lat: 34.3416,
+        lng: 108.9402
+    },
+    {
+        name: "Zhongshan",
+        country: "China",
+        lat: 22.5196,
+        lng: 113.3625
+    },
+    {
+        name: "Zhuhai",
+        country: "China",
+        lat: 22.2769,
+        lng: 113.5630
+    },
+    {
+        name: "Lijiang",
+        country: "China",
+        lat: 26.8553,
+        lng: 100.0407
+    },
+    {
+        name: "Dali",
+        country: "China",
+        lat: 25.2820,
+        lng: 100.0050
+    },
+    {
+        name: "Kunming",
+        country: "China",
+        lat: 25.0406,
+        lng: 102.7085
+    },
+    {
+        name: "Zhengzhou",
+        country: "China",
+        lat: 34.7466,
+        lng: 113.6602
+    },
+    {
+        name: "Ningbo",
+        country: "China",
+        lat: 29.8683,
+        lng: 121.5495
+    },
+    {
+        name: "Shenyang",
+        country: "China",
+        lat: 41.7961,
+        lng: 123.4291
+    },
+    {
+        name: "Changchun",
+        country: "China",
+        lat: 43.8807,
+        lng: 125.3245
+    },
+    {
+        name: "Huanggang",
+        country: "China",
+        lat: 30.4475,
+        lng: 114.8723
+    },
+    {
+        name: "Harbin",
+        country: "China",
+        lat: 45.8019,
+        lng: 126.5315
+    },
+    {
+        name: "Huizhou",
+        country: "China",
+        lat: 23.0995,
+        lng: 114.3924
+    },
+    {
+        name: "Dongguan",
+        country: "China",
+        lat: 23.0208,
+        lng: 113.7518
+    },
+    {
+        name: "Jilin",
+        country: "China",
+        lat: 43.8807,
+        lng: 126.5494
+    },
+    {
+        name: "Suzhou",
+        country: "China",
+        lat: 31.3049,
+        lng: 120.6194
+    },
+    {
+        name: "Nanjing",
+        country: "China",
+        lat: 32.0617,
+        lng: 118.7778
+    },
+    {
+        name: "Huzhou",
+        country: "China",
+        lat: 30.8647,
+        lng: 120.0988
+    },
+    {
+        name: "Incheon",
+        country: "South Korea",
+        lat: 37.4819,
+        lng: 126.7793
+    },
+    {
+        name: "Seoul",
+        country: "South Korea",
+        lat: 37.5665,
+        lng: 126.9780
+    },
+    {
+       name: "Vienna",
+       country: "Austria",
+        lat: 48.2082,
+        lng: 16.3738
+    },
+    {
+        name: "Budapest",
+        country: "Hungary",
+        lat: 47.4979,
+        lng: 19.0402
+    },
+    {
+        name: "Prague",
+        country: "Czech Republic",
+        lat: 50.0755,
+        lng: 14.4378
+    },
+    {
+        name: "Salzburg",
+        country: "Austria",
+        lat: 47.8095,
+        lng: 13.0550
+    },
+    {
+        name: "St. Wolfgang",
+        country: "Austria",
+        lat: 47.7180,
+        lng: 13.4240
+    },
+    {
+        name: "Istanbul",
+        country: "Turkey",
+        lat: 41.0082,
+        lng: 28.9784
+    },
+    {
+        name: "Rome",
+        country: "Italy",
+        lat: 41.9028,
+        lng: 12.4964
+    },
+    {
+        name: "Milan",
+        country: "Italy",
+        lat: 45.4642,
+        lng: 9.1900
+    },
+    {
+        name: "Venice",
+        country: "Italy",
+        lat: 45.4408,
+        lng: 12.3155
+    },
+    {
+        name: "Rio de Janeiro",
+        country: "Brazil",
+        lat: -22.9068,
+        lng: -43.1729
+    }
+
+];
+
+// 生成城市卡片
+function generatePlaceCards() {
+    console.log('生成城市卡片');
+    const placesGrid = document.getElementById('placesGrid');
+    if (!placesGrid) {
+        console.error('找不到placesGrid元素');
+        return;
+    }
+
+    // 按国家和城市名排序
+    const sortedPlaces = visitedPlaces.sort((a, b) => {
+        if (a.country !== b.country) {
+            return a.country.localeCompare(b.country, 'en');
+        }
+        return a.name.localeCompare(b.name, 'en');
+    });
+
+    const cardsHTML = sortedPlaces.map(place =>
+        '<div class="place-card">' +
+            '<div class="place-name">' + place.name + '</div>' +
+            '<div class="place-country">' + place.country + '</div>' +
+        '</div>'
+    ).join('');
+
+    placesGrid.innerHTML = cardsHTML;
+    console.log('城市卡片生成完成，共', sortedPlaces.length, '个城市');
+}
+
+// 初始化函数
+function initializePage() {
+    console.log('页面开始初始化');
+    generatePlaceCards();
+    console.log('页面初始化完成');
+}
+
+// 页面加载时初始化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePage);
+} else {
+    // 如果文档已经加载完成
+    setTimeout(initializePage, 10);
+}
+
+// 备用初始化（确保执行）
+setTimeout(function() {
+    console.log('备用初始化执行');
+    initializePage();
+}, 500);
